@@ -36,3 +36,67 @@ NODE createBST(NODE root,int item)
                 return root;
         }
 }
+
+NODE findMIN(NODE root)
+{
+        NODE cur;
+        for(cur=root; cur->left!=NULL; cur=cur->left);
+        return cur;
+
+}
+NODE del(NODE root, int key)
+{
+        NODE temp;
+        if(root == NULL)
+                return root;
+        if(key<root->info)
+                root->left=del(root->left,key);
+        else if(key>root->info)
+                root->right=del(root->right,key);
+        else
+        {
+                if(root->left==NULL && root->right==NULL)
+                        root = NULL;
+                else if (root->left==NULL)
+                {
+                        temp=root;
+                        root=root->right;
+                        free(temp)
+                }
+                else if (root->right==NULL)
+                {
+                        temp=root;
+                        root=root->left;
+                        free(temp)
+                }
+                else
+                {
+                        temp=findMIN(root->right);
+                        root->info=temp->info;
+                        root->right=del(root->right,temp->info);
+                }
+        }
+        return root;
+}
+
+void preorder(NODE root)
+{
+        if(root==NULL) return;
+        printf("%d\t",root->info );
+        preorder(root->left);
+        preorder(root->right);
+}
+void inorder(NODE root)
+{
+        if(root==NULL) return;
+        inorder(root->left);
+        printf("%d\t",root->info );
+        inorder(root->right);
+}
+void postorder(NODE root)
+{
+        if(root==NULL) return;
+        preorder(root->left);
+        preorder(root->right);
+        printf("%d\t",root->info );
+}
