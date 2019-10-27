@@ -31,17 +31,20 @@ This repo contains the programs that were made as a part of the college curricul
 
 - #### Operating Systems Lab
 
-- [ ] cp,ls (-l),rm,mv
-- [ ] Process system calls - exec,etc
-- [ ] Fork, exec calls
-- [ ] Pthreads
 - [ ] Process scheduling
   - [ ] Producer, Consumer
   - [ ] Reader, Writer
   - [ ] Diners'
-  
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
 ### Semester 4
-  
+
+---------------------------------------------------------------------------------------------------------------------------
+
 ### Semester 5
   
+---------------------------------------------------------------------------------------------------------------------------  
+
 ### Semester 6
