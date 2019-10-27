@@ -18,23 +18,21 @@ NODE createBST(NODE root,int item)
         temp->left=temp->right=NULL;
         if(root==NULL)
                 return temp;
-        else
-        {
-                for(prev=NULL,cur=root; cur!=NULL;)
-                {
-                        prev=cur;
-                        if(item<cur->info)
-                                cur=cur->left;
-                        else
-                                cur=cur->right;
-                }
 
-                if(item<prev->info)
-                        prev->left=temp;
+        for(prev=NULL,cur=root; cur!=NULL;)
+        {
+                prev=cur;
+                if(item<cur->info)
+                        cur=cur->left;
                 else
-                        prev->right=temp;
-                return root;
+                        cur=cur->right;
         }
+
+        if(item<prev->info)
+                prev->left=temp;
+        else
+                prev->right=temp;
+        return root;
 }
 
 NODE findMIN(NODE root)
@@ -44,6 +42,7 @@ NODE findMIN(NODE root)
         return cur;
 
 }
+
 NODE del(NODE root, int key)
 {
         NODE temp;
@@ -61,13 +60,13 @@ NODE del(NODE root, int key)
                 {
                         temp=root;
                         root=root->right;
-                        free(temp)
+                        free(temp);
                 }
                 else if (root->right==NULL)
                 {
                         temp=root;
                         root=root->left;
-                        free(temp)
+                        free(temp);
                 }
                 else
                 {
@@ -96,7 +95,65 @@ void inorder(NODE root)
 void postorder(NODE root)
 {
         if(root==NULL) return;
-        preorder(root->left);
-        preorder(root->right);
-        printf("%d\t",root->info );
+        postorder(root->left);
+        postorder(root->right);
+        printf("%d\t",root->info);
+}
+
+void main()
+{
+        NODE root=(NODE)malloc(sizeof(struct node));
+        root = NULL;
+        char ch='y';
+        int choice;
+        do
+        {                printf("Entered choice is : %d",choice);
+                //system("clear");
+                printf("Enter the choice of operation : \n");
+                printf("1.Insert\n");
+                printf("2.Delete\n");
+                printf("3.Preoder\n");
+                printf("4.Inorder\n");
+                printf("5.Postorder\n");
+                printf("6.Exit\n");
+                scanf(" %d",&choice);
+                switch (choice)
+                {
+                        case 1: {
+                                int x;
+                                printf("Enter the value to be inserted : ");
+                                scanf("%d",&x);
+                                root=createBST(root,x);
+                                break;
+                        }
+                        case 2: {
+                                int x;
+                                printf("Enter the value to be deleted : ");
+                                scanf("%d",&x);
+                                root=del(root,x);
+                                break;
+                        }
+                        case 3: {
+                                preorder(root);
+                                break;
+                        }
+                        case 4: {
+                                inorder(root);
+                                break;
+                        }
+                        case 5: {
+                                postorder(root);
+                                break;
+                        }
+                        case 6: {
+                                exit(0);
+                        }
+                        default: {
+                                printf("Invalid choice of operation ...\n");
+                                break;
+                        }
+                }
+                printf("Do you want to continue ? (y or n)\n");
+                scanf(" %c",&ch);
+        } while(ch=='y'||ch=='Y');
 }
