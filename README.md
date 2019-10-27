@@ -18,7 +18,7 @@ This repo contains the programs that were made as a part of the college curricul
 
  - #### Data Structures Lab
   - [X] 1 - Stack Operations
-  - [X] 2 - Infix to Postfix using Stacks
+  - [ ] 2 - Infix to Postfix using Stacks
   - [ ] 3 - Messaging System - Using message queues
   - [X] 4 - Multiplication of Polynomials - Using Linked ListTraversal of Trees
   - [X] 5 - Addition of long positive integers
