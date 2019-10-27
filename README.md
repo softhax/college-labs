@@ -20,21 +20,20 @@ This repo contains the programs that were made as a part of the college curricul
   - [X] 1 - Stack Operations
   - [X] 2 - Infix to Postfix using Stacks
   - [ ] 3 - Messaging System - Using message queues
-  - [X] 4 - Multiplication of Polynomials - Using Linked List
+  - [X] 4 - Multiplication of Polynomials - Using Linked ListTraversal of Trees
   - [X] 5 - Addition of long positive integers
   - [X] 6 - Sparse Matrix - Using Doubly Linked List
   - [X] 7 - Binary Tree Operations - insert,delete,preorder,inorder,postorder
   - [ ] 8 - Traversal of Trees
   - [X] 9 - Hashing using Linear probing
-  - [  10 - Priority Queue Operations
-
+  - [ ] 10 - Priority Queue Operations
 
 - #### Operating Systems Lab
 
-- [ ] Process scheduling
+  - [ ] Process scheduling
   - [ ] Producer, Consumer
   - [ ] Reader, Writer
-  - [ ] Diners'
+  - [ ] Diners
 
 
 ---------------------------------------------------------------------------------------------------------------------------
