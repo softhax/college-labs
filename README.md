@@ -16,7 +16,7 @@ This repo contains the programs that were made as a part of the college curricul
 
 ### Semester 3
 
- - #### Data Structures Lab
+- #### Data Structures Lab
   - [X] 1 - Stack Operations
   - [ ] 2 - Infix to Postfix using Stacks
   - [ ] 3 - Messaging System - Using message queues
