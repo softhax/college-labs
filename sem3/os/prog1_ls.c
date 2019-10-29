@@ -38,12 +38,12 @@ int main(int argc,char *argv[])
     amode[10]='\0';
     printf("%s",amode);
 
-    printf("%d",(int)statv.st_nlink);
-    gr_p=getgrpid(statv.st_gid);
+    printf(" %d ",(int)statv.st_nlink);
+    gr_p=getgrgid(statv.st_gid);
     pw_p=getpwuid(statv.st_uid);
     printf("%s ",pw_p->pw_name);
     printf("%s ",gr_p->gr_name);
-    printf("%d",(int)statv.st_size);
+    printf("%d ",(int)statv.st_size);
     printf("%s\n\n\n",argv[1]);
     return 0;
 }
