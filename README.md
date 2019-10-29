@@ -30,11 +30,15 @@ This repo contains the programs that were made as a part of the college curricul
 
 - #### Operating Systems Lab
 
-  - [ ] Process scheduling
-  - [ ] Producer, Consumer
-  - [ ] Reader, Writer
-  - [ ] Diners
-
+  - [ ] 1 - Implementation of basic UNIX commands using file API's - cp,ls,rm,mv
+  - [ ] 2 - Process control system calls
+  - [ ] 3 - Thread Management using Pthread library
+  - [ ] 4 - Process Scheduling and process priority
+  - [ ] 5 - Process/Thread Synchronization
+  - [ ] 6 - Process/Thread Synchronization for file access
+  - [ ] 7 - Deadlock Avoidance
+  - [ ] 8 - Memory Management
+  - [ ] 9 - Static and shared libraries
 
 ---------------------------------------------------------------------------------------------------------------------------
 
