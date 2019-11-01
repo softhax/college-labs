@@ -11,28 +11,29 @@
 #define HUNGRY 1
 #define EATING 2
 
-typedef int semaphore;
+//typedef int semaphore;
 int state[N];
 sem_t mutex=1;
 sem_t s[N];
+int phil_num[N]={0,1,2,3,4};
 
-
-void philosopher(int *i)
+void *philosopher(void *num)
 {
     while(TRUE)
     {
-	printf("Philosopher %d is THINKING\n",i);
-	take_forks(&i);
-	printf("Philosopher %d is EATING\n",i);
-	put_forks(&i);
+	int *i=num;
+//	printf("Philosopher %d is THINKING\n",i);
+	take_forks(*i);
+//	printf("Philosopher %d is EATING\n",i);
+	put_forks(*i);
     }
 }
 
 
-void take_forks(int *i)
+void take_forks(int ph_num)
 {
-    down(&mutex);
-    state[i]=HUNGRY;
+    //down(&mutex);
+    state[]=HUNGRY;
     printf("Philosopher %d is HUNGRY\n",i);
     test(i);
     up(&mutex);
