@@ -43,8 +43,8 @@ This repo contains the programs that were made as a part of the college curricul
      - [ ] iii Producer Consumer
   - [ ] 5 - Process/Thread Synchronization
   - [ ] 6 - Process/Thread Synchronization for file access
-  - [ ] 7 - Deadlock Avoidance
-  - [ ] 8 - Memory Management
+  - [X] 7 - Deadlock Avoidance
+  - [X] 8 - Memory Management
   - [ ] 9 - Static and shared libraries
 
 ---------------------------------------------------------------------------------------------------------------------------
