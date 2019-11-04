@@ -39,9 +39,9 @@ This repo contains the programs that were made as a part of the college curricul
   - [ ] 3 - Thread Management using Pthread library
   - [ ] 4 - Process Scheduling and process priority
   - [ ] 5 - Process/Thread Synchronization
-     - [ ] i   Dining Philosphers
+     - [X] i   Dining Philosphers
      - [ ] ii  Reader Writer
-     - [ ] iii Producer Consumer
+     - [X] iii Producer Consumer
   - [ ] 6 - Process/Thread Synchronization for file access
   - [X] 7 - Deadlock Avoidance - Banker's Algorithm
   - [X] 8 - Memory Management - Buddy Memory Allocation Algorithm
