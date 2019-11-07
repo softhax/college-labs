@@ -18,7 +18,7 @@ void main()
 	avail[i]=instance;
 
     }
-    printf("Enter man numner of instances of resources that a process need : ");
+    printf("Enter max number of instances of resources that a process need : ");
     for(i=0;i<process;i++)
     {
 	printf("For P[%d]",i);
