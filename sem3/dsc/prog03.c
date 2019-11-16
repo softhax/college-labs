@@ -68,7 +68,7 @@ void main()
 	{   
 	    case 1:
 		printf("Enter the message to enqueue :\n");		
-		scanf(" %s",msg);
+		scanf(" %[^\n]s",msg);
 		enqueue(&q,msg);
 		break;
 	    case 2:
