@@ -46,7 +46,7 @@ This repo contains the programs that were made as a part of the college curricul
 	    - [X] ii  rm
   - [X] 6 - Deadlock Avoidance - Banker's Algorithm
   - [X] 7 - Memory Management - Buddy Memory Allocation Algorithm
-  - [ ] 8 - Static and shared libraries
+  - [X] 8 - Static and shared libraries
 
 ---------------------------------------------------------------------------------------------------------------------------
 
