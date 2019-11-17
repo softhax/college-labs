@@ -32,20 +32,21 @@ This repo contains the programs that were made as a part of the college curricul
 
   - [X] 1 - Implementation of basic UNIX commands using file API's
      - [X] i   ls
-     - [X] ii  mv
-     - [X] iii cp
-     - [X] iv  rm
-  - [ ] 2 - Process control system calls
-  - [ ] 3 - Thread Management using Pthread library
-  - [ ] 4 - Process Scheduling and process priority
-  - [ ] 5 - Process/Thread Synchronization
+     - [X] ii  cp
+  - [ ] 2 - Process control system calls and Thread Management using Pthread library
+  - [X] 3 - Process/Thread Synchronization
      - [X] i   Dining Philosphers
-     - [ ] ii  Reader Writer
-     - [X] iii Producer Consumer
-  - [ ] 6 - Process/Thread Synchronization for file access
-  - [X] 7 - Deadlock Avoidance - Banker's Algorithm
-  - [X] 8 - Memory Management - Buddy Memory Allocation Algorithm
-  - [ ] 9 - Static and shared libraries
+     - [X] ii  Producer Consumer
+  - [X] 4 - Process/Thread Synchronization
+     - [X] i   Dining Philosphers
+     - [X] ii  Reader Writer
+  - [X] 5 - Process/Thread Synchronization for file access
+	  - Implementation of basic UNIX Commands using file API's
+	    - [X] i   mv
+	    - [X] ii  rm
+  - [X] 6 - Deadlock Avoidance - Banker's Algorithm
+  - [X] 7 - Memory Management - Buddy Memory Allocation Algorithm
+  - [ ] 8 - Static and shared libraries
 
 ---------------------------------------------------------------------------------------------------------------------------
 
