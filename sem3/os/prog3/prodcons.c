@@ -15,13 +15,14 @@ int data[SIZE];
 void* producer(void* arg)
 {
     int outVar;
-    for(int i=0;i<TIMES;i++)
+    for(;;)
     {
 	sem_wait(&empty);
 	sem_wait(&mutex);
 	sem_getvalue(&full,&outVar);
 	*(data+outVar)=random()%20;
-	printf("I: %d\n",data[outVar]);
+	printf("Producer: %d\n",data[outVar]);
+	sleep(1);
 	sem_post(&mutex);
 	sem_post(&full);
     }
@@ -33,12 +34,13 @@ void* producer(void* arg)
 void* consumer(void* arg)
 {
     int outVar;
-    for(int i=0;i<TIMES;i++)
+    for(;;)
     {
 	sem_wait(&full);
 	sem_wait(&mutex);
 	sem_getvalue(&full,&outVar);
-	printf("P: %d\n",data[outVar]);
+	printf("Consumer: %d\n",data[outVar]);
+	sleep(1);
 	sem_post(&mutex);
 	sem_post(&empty);
     }
