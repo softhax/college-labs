@@ -50,9 +50,12 @@ void matDisplay(NODE start,int m,int n)
 	{
 	    if(temp!=NULL && temp->row==i && temp->col==j)
 	    {
-		printf("%d",temp->info);
+		printf("%d ",temp->info);
 		temp=temp->right;
 	    }
+	    else
+		printf("0 ");
+
 	}
 	printf("\n");
 

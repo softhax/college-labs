@@ -49,10 +49,12 @@ void maxheapify(int a[],int i)
 {
     int left=2*i,right=2*i+1,largest;
 
-    if(left<=n&&a[left]>a[i])
+    if(left<=n	&&  a[left]>a[i])
         largest=left;
-    else largest=i;
-    if(right<=n&&a[right]>a[largest])
+    else
+	largest=i;
+
+    if(right<=n	&&  a[right]>a[largest])
         largest = right;
 
     if(largest!=i)
@@ -60,7 +62,6 @@ void maxheapify(int a[],int i)
         int temp=a[i];
         a[i]=a[largest];
         a[largest]=temp;
-
         maxheapify(a,largest);
     }
 }

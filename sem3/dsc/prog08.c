@@ -57,37 +57,43 @@ NODE createExpTree(char infix[15])
             temp=newnode(symbol);
             /*If stack top is less precedence then push*/
             if(symbol=='(')
-            operst[++top1]=temp;
+		operst[++top1]=temp;
             else if(top1 == -1 || preced (operst[top1]->info) < preced(symbol))
-             operst[++top1]=temp;
-            else if(symbol == ')') {
-            while((operst[top1]->info!='(')&&(top1!=-1) && (top2!=-1) && preced(operst[top1]->info) >= preced(symbol)) {
-            t3= operst[top1--];
-            t1=treest[top2--];
-            t2=treest[top2--];
-            t3->right=t1;
-            t3->left=t2;
-            treest[++top2] = t3;
+		operst[++top1]=temp;
+            else if(symbol == ')')
+	    {
+		while( (operst[top1]->info!='(')  &&  (top1!=-1)  &&  (top2!=-1)  &&  preced(operst[top1]->info)>=preced(symbol) )
+		{
+		    t3= operst[top1--];
+		    t1=treest[top2--];
+		    t2=treest[top2--];
+		    t3->right=t1;
+		    t3->left=t2;
+		    treest[++top2] = t3;
+		}
+
+		if(operst[top1]->info=='(')
+		    top1--;
             }
-        if(operst[top1]->info=='(')
-            top1--;
-            }
+
             else
             {
-            while((top1!=-1) && (top2!=-1) && preced(operst[top1]->info) >= preced(symbol)) {
-            t3= operst[top1--];
-            t1=treest[top2--];
-            t2=treest[top2--];
-            t3->right=t1;
-            t3->left=t2;
-            treest[++top2] = t3;
-            }
-            operst[++top1] = temp;
-        }
+		while((top1!=-1) && (top2!=-1) && preced(operst[top1]->info) >= preced(symbol))
+		{
+		    t3= operst[top1--];
+		    t1=treest[top2--];
+		    t2=treest[top2--];
+		    t3->right=t1;
+		    t3->left=t2;
+		    treest[++top2] = t3;
+		}
+		operst[++top1] = temp;
+	    }
+	}	
     }
-}
-while(top1 != -1)
-{
+
+    while(top1 != -1)
+    {
 
             t1=treest[top2--];
             t2=treest[top2--];
@@ -95,8 +101,9 @@ while(top1 != -1)
             temp->right=t1;
             temp->left=t2;
             treest[++top2]=temp;
-}
-return treest[top2];
+    }
+
+    return treest[top2];
 }
 
 
@@ -106,7 +113,7 @@ void preorder(NODE root)
     {
         printf("%c",root->info);
         preorder(root->left);
-         preorder(root->right);
+        preorder(root->right);
     }
 }
 void inorder(NODE root)
@@ -115,7 +122,7 @@ void inorder(NODE root)
     {
         inorder(root->left);
         printf("%c",root->info);
-         inorder(root->right);
+        inorder(root->right);
     }
 }
 void postorder(NODE root)
@@ -123,8 +130,8 @@ void postorder(NODE root)
     if(root!=NULL)
     {
         postorder(root->left);
-         postorder(root->right);
-          printf("%c",root->info);
+        postorder(root->right);
+        printf("%c",root->info);
     }
 }
 
@@ -132,14 +139,14 @@ int main()
 {
     NODE root=NULL;
     char infix[15];
-     printf("\n ENTER THE INFIX EXPRESSION\n");
-     scanf("%s",infix);
-     root= createExpTree(infix);
-      printf("\nINFIX\n");
-      inorder(root);
-      printf("\nPOSTFIX\n");
-      postorder(root);
-      printf("\nPREFIX\n");
-      preorder(root);
-      return 0;
+    printf("\n ENTER THE INFIX EXPRESSION\n");
+    scanf("%s",infix);
+    root= createExpTree(infix);
+    printf("\nINFIX\n");
+    inorder(root);
+    printf("\nPOSTFIX\n");
+    postorder(root);
+    printf("\nPREFIX\n");
+    preorder(root);
+    return 0;
 }
