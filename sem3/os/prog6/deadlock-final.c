@@ -63,21 +63,25 @@ void main()
 	}
 
 
-	for(i=0;i<p;i++){
+	for(i=0;i<p;i++)
+	{
 		printf("\nEnter the Max Value of resource req by process %d",i);
-		for(j=0;j<r;j++){
-		printf("\nResource of type %d:",j+1);
-		scanf("%d",&max[i][j]);
+		for(j=0;j<r;j++)
+		{
+		    printf("\nResource of type %d:",j+1);
+		    scanf("%d",&max[i][j]);
 		}
 	}
 
 
-	for(i=0;i<p;i++){
+	for(i=0;i<p;i++)
+	{
                 printf("\nEnter the Alloted  Value of resource to process %d",i);
-                for(j=0;j<r;j++){
-                printf("\nResource of type %d:",j+1);
-                scanf("%d",&allot[i][j]);
-		nd[i][j]=max[i][j]-allot[i][j];
+                for(j=0;j<r;j++)
+		{
+		    printf("\nResource of type %d:",j+1);
+		    scanf("%d",&allot[i][j]);
+		    nd[i][j]=max[i][j]-allot[i][j];
                 }
         }
 	while(1)

@@ -19,10 +19,13 @@ void* producer(void* arg)
     {
 	sem_wait(&empty);
 	sem_wait(&mutex);
+
 	sem_getvalue(&full,&outVar);
 	*(data+outVar)=random()%20;
 	printf("Producer: %d\n",data[outVar]);
 	sleep(1);
+
+
 	sem_post(&mutex);
 	sem_post(&full);
     }
@@ -38,9 +41,11 @@ void* consumer(void* arg)
     {
 	sem_wait(&full);
 	sem_wait(&mutex);
+
 	sem_getvalue(&full,&outVar);
 	printf("Consumer: %d\n",data[outVar]);
 	sleep(1);
+
 	sem_post(&mutex);
 	sem_post(&empty);
     }
