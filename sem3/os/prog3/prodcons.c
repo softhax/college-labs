@@ -6,26 +6,22 @@
 #include<unistd.h>
 #include<semaphore.h>
 
-#define SIZE 3
-#define TIMES 5
+#define SIZE 5
 
 sem_t full,empty,mutex;
 int data[SIZE];
 
 void* producer(void* arg)
 {
-    int outVar;
+    int outVar,buffer;
     for(;;)
     {
 	sem_wait(&empty);
 	sem_wait(&mutex);
-
 	sem_getvalue(&full,&outVar);
-	*(data+outVar)=random()%20;
+	buffer=random()%20;
+	data[outVar]=buffer;
 	printf("Producer: %d\n",data[outVar]);
-	sleep(1);
-
-
 	sem_post(&mutex);
 	sem_post(&full);
     }
@@ -36,16 +32,15 @@ void* producer(void* arg)
 
 void* consumer(void* arg)
 {
-    int outVar;
+    int outVar,buffer;
     for(;;)
     {
 	sem_wait(&full);
 	sem_wait(&mutex);
-
 	sem_getvalue(&full,&outVar);
-	printf("Consumer: %d\n",data[outVar]);
-	sleep(1);
-
+	buffer=data[outVar];
+	printf("Consumer: %d\n",buffer);
+	sleep(1);  
 	sem_post(&mutex);
 	sem_post(&empty);
     }

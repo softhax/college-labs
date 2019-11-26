@@ -5,6 +5,7 @@
 struct node 
 {
 	int size;
+	int data;	//This holds the actual size of memory  that has been allocated to the process .
 	int status;
 	//if 0 then not occupied, if 1 then occupied, if 2 then split
 	struct node *right, *left;
@@ -35,7 +36,7 @@ int main ()
 	NP head = create_node (size,0);
 	while (1)
 	{
-		printf ("MEMORY SLICE:OCCUPANCY-\n");
+		printf ("MEMORY SLICE\tOCCUPANCY\tHOW MUCH\n");
 		display_tree (head);
 		printf ("\nEnter 1. to allocate process, 2. to deallocate process 3. to exit: ");
 		scanf ("%d",&choice);
@@ -49,7 +50,7 @@ int main ()
 				   else
 				   	printf ("Unable to allocate.\n");
 				   break;
-			case 2: printf ("Enter the size of the block that needs to be deallocated:");
+			case 2: printf ("Enter the size of the process that needs to be deallocated:");
 				   scanf ("%d",&size);
 				   choice = try_to_remove(head,size);
 				   if (choice)
@@ -72,6 +73,7 @@ NP create_node (int size, int status)
 {
 	NP temp = (NP)malloc (sizeof (N));
 	temp->size = size;
+	temp->data=0;		//Changed
 	temp->right = temp->left = NULL;
 	temp->status = status;
 	return temp;
@@ -79,9 +81,10 @@ NP create_node (int size, int status)
 
 int check_space(NP head, int size)
 {
-	if (head->size<size)//process too big
-			return 0;
-	if (head->status == 0)//not divided & unoccupied
+	if (head->size<size)	//process too big
+		return 0;	//return 0 to show that not enough space available
+
+	if (head->status == 0)	//not divided & unoccupied
 	{
 		if ((head->size)/2>=size)//if division possible
 		{
@@ -95,6 +98,7 @@ int check_space(NP head, int size)
 		{
 			//it should be allocated in the same node
 			head->status = 1;
+			head->data=size;
 			return 1;
 		}
 	}
@@ -118,16 +122,17 @@ void display_tree (NP head)
 		display_tree (head->right);
 	}
 	else
-		printf ("%d:%d\t",head->size,head->status);
+		printf ("%d\t\t%d\t\t%d\n",head->size,head->status,head->data);
 }
 
 int try_to_remove (NP head,int size)
 {
-	if (head->status == 1)
+	if (head->status == 1)	//if it it occupied
 	{
-		if (head->size == size)
+		if (head->data == size)  //then check that if it matches the size of block
 		{
-			head->status = 0;
+			head->data=0;
+			head->status = 0;   //and remove it if it does by making status=0 ie unoccupied
 			return 1;	//successful removal	   
 		}
 	}
@@ -139,7 +144,7 @@ int try_to_remove (NP head,int size)
 	}
 	return 0;
 }
-//important af
+
 void make_buddy (NP head)
 {
 	if (head->status == 0||head->status == 1)

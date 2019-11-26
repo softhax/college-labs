@@ -39,15 +39,6 @@ void bankers()
 		printf("unsafe state\n");
 }
 
-int complete(int com[],int r)
-{
-	int i,flag=0;
-	for(i=0;i<r;i++)
-		if(com[i]==1)
-			flag=1;
-	return flag;
-}
-
 
 void main()
 {

@@ -33,7 +33,7 @@ This repo contains the programs that were made as a part of the college curricul
   - [X] 1 - Implementation of basic UNIX commands using file API's
      - [X] i   ls
      - [X] ii  cp
-  - [ ] 2 - Process control system calls and Thread Management using Pthread library
+  - [X] 2 - Process control system calls and Thread Management using Pthread library
   - [X] 3 - Process/Thread Synchronization
      - [X] i   Dining Philosphers
      - [X] ii  Producer Consumer
