@@ -87,7 +87,7 @@ void requestAllocation()
     }
     
     int check=safetyAlgorithm();
-    if(1)
+    if(check)
     {
 	printf("\nRequest Granted !!!");
 	printf("\nSafe Sequence:\n");
