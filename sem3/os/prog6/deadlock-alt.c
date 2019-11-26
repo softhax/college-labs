@@ -1,9 +1,11 @@
 #include<stdio.h>
 
-void main()
-{
+
     int process,resource,i,j,instance,k=0;
     int count1=0,count2=0;
+
+void main()
+{
     printf("Enter the number of processes : ");
     scanf("%d",&process);
     printf("Enter the number of resources : ");
