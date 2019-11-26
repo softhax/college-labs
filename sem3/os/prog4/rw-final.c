@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<semaphore.h>
+#include<pthread.h>
+#include<unistd.h>
+sem_t mutex,wrt;
+int data=0,rcount=0;
+void * reader(void * arg)
+{
+	int f;
+	f=(int )arg;
+
+	sem_wait(&mutex);
+	rcount++;
+	if(rcount==1)
+		sem_wait(&wrt);
+	sem_post(&mutex);
+
+	printf("Data read by the reader %d is %d\n ",f,data);
+	sleep(1);
+
+	sem_wait(&mutex);
+	rcount--;
+	if(rcount==0)
+		sem_post(&wrt);
+	sem_post(&mutex);    
+}
+
+void * writer(void *arg)
+{
+	int f;
+//	for(int i=0;i<4;i++)
+//	{
+	    f=(int )arg;
+	    sem_wait(&wrt);
+	    data++;
+	    printf("Data written by writer %d is %d\n",f,data);
+	    sleep(1);
+	    sem_post(&wrt);
+//	}
+}
+
+void main()
+{
+	int i,b;
+	pthread_t rtid[5], wtid[5];
+	sem_init(&mutex,0,1);
+	sem_init(&wrt,0,1);
+	for(i=0;i<=4;i++)
+	{
+		pthread_create(&wtid[i],NULL,writer,(void *)i);
+		pthread_create(&rtid[i],NULL,reader,(void *)i);
+	}
+	for(i=0;i<=4;i++)
+	{
+		pthread_join(rtid[i],NULL);
+		pthread_join(wtid[i],NULL);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
