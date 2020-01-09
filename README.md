@@ -7,6 +7,8 @@ This repo contains the programs that were made as a part of the college curricul
   * Data Structures Lab
   * Operating Systems Lab
 - **Sem 4**
+  * Design and Analysis of Algorithms Lab
+  * Object Oriented Programming Lab
 
 - **Sem 5**
 
@@ -66,6 +68,17 @@ This repo contains the programs that were made as a part of the college curricul
   - [ ] 11 - Implement N-Queens problem using backtracking
   - [ ] 12 - Solve TSP problem using branch and bound
 	
+- #### Object Oriented Programming Lab
+  - [ ] 1 - Create Java class Complex to initialize values using paramererized constructor and demonstrate overloading constructors and methods
+  - [ ] 2 - Design Studen, College and Employee classes with respective constructors and demonstrate passing of object as a parameter to constructor
+  - [ ] 3 - Design base class Circle and derived class Cylinder with required methods and constructors respectively and demonstrate code reuse and polymorphism by inheriting constructors and methods of base class
+  - [ ] 4 - Create Thirdsem class and put this in CSE package
+  - [ ] 5 - Heap sort and it's time calculations
+  - [ ] 6 - Horspool's algorithm for String Matching
+  - [ ] 7 - 0/1 Knapsack problem using Dynamic Programming
+  - [ ] 8 - Minimum cost spanning tree of a given unidirected graph using Prim's algorithm
+  - [ ] 9 - To find shortest path using Dijkstra's algorithm for a weighted connected graph
+  - [ ] 10 - 
 
 ---------------------------------------------------------------------------------------------------------------------------
 
