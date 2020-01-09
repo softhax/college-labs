@@ -52,6 +52,21 @@ This repo contains the programs that were made as a part of the college curricul
 
 ### Semester 4
 
+- #### Design And Analysis Of Algorithms Lab
+  - [] 1 - Merge Sort and its's time calculations
+  - [] 2 - Quick Sort and it's time calculations
+  - [] 3 - DFS, BFS, connectivity, number of components
+  - [] 4 - Topological ordering of vertices of digraph using (a) Vertices deletion method and (b) DFS method
+  - [] 5 - Heap sort and it's time calculations
+  - [] 6 - Horspool's algorithm for String Matching
+  - [] 7 - 0/1 Knapsack problem using Dynamic Programming
+  - [] 8 - Minimum cost spanning tree of a given unidirected graph using Prim's algorithm
+  - [] 9 - To find shortest path using Dijkstra's algorithm for a weighted connected graph
+  - [] 10 - To find a subset of a given set S of n positive integers whose sum is equal to a given positive integer d and display suitable message in case of no solution
+  - [] 11 - Implement N-Queens problem using backtracking
+  - [] 12 - Solve TSP problem using branch and bound
+	
+
 ---------------------------------------------------------------------------------------------------------------------------
 
 ### Semester 5
