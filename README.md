@@ -80,6 +80,17 @@ This repo contains the programs that were made as a part of the college curricul
   - [ ] 9 - To find shortest path using Dijkstra's algorithm for a weighted connected graph
   - [ ] 10 - 
 
+
+- #### Microcontrollers and Embedded Systems Lab
+  - [X] 1 - Addition and Subtraction of 32 bit and 64 bit numbers
+  - [X] 2 - Smallest and largest of N 32 bit numbers	
+  - [X] 3 - Average of N 32 bit numbers
+  - [X] 4 - Count occurences of N 32 bit numbers in a list using Linear Search algorithm
+  - [X] 5 - 
+     -	[X] i	Computer number of 1's in a 32 bit number and check the parity of a given number
+     -	[X] ii	Computer GCD of 2 32 bit numbers using procedure
+  - [X] 6 - Factorial of 32 bit number using procedure
+  - [X] 7 - Sort given list of 32 bit numbers using Bubble Sort
 ---------------------------------------------------------------------------------------------------------------------------
 
 ### Semester 5
