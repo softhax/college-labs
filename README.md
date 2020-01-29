@@ -9,10 +9,13 @@ This repo contains the programs that were made as a part of the college curricul
 - **Sem 4**
   * Design and Analysis of Algorithms Lab
   * Object Oriented Programming Lab
+  * Microcontrollers and Embedded Systems Lab
 
 - **Sem 5**
-
+  * Coming Soon - 2021
+  
 - **Sem 6**
+  * Coming Soon  -2021
 
 ---------------------------------------------------------------------------------------------------------------------------
 
