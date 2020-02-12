@@ -4,22 +4,24 @@ public class Complex {
     double real;
     double img;
 
+    Complex(){
+        this.real = 0;
+        this.img = 0;
+    }
     Complex(double real, double img) {
         this.real = real;
         this.img = img;
     }
 
-    void add(Complex c) {
-        this.real += c.real;
-        this.img += c.img;
+    Complex add(Complex c1,Complex c2) {
+        return (new Complex(c1.real+c2.real,c1.img+c2.img));
     }
 
-    void subtract(Complex c) {
-        this.real -= c.real;
-        this.img -= c.img;
+    Complex subtract(Complex c1, Complex c2) {
+        return (new Complex(c1.real-c2.real,c1.img-c2.img));
     }
 
     void display() {
-        System.out.println("\nThe Complex number is : " + this.real + " + i" + this.img);
+        System.out.print(this.real + " + i" + this.img+"\t");
     }
 }
