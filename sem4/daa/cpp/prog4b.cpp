@@ -50,8 +50,5 @@ int main()
     cout<<"\nThe topological ordering is :"<<endl;
     for(i=0;i<n;i++)	cout<<topo[i]<<" ";
     cout<<endl;
-    //Performing Vertex Deletion Method
-
-
     return 0;
 }
