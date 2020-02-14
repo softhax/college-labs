@@ -12,12 +12,14 @@ public class Student {
         this.name = name;
         this.addr = addr;
     }
+    Student(){}
 
     void input()
     {
         Scanner s3 = new Scanner(System.in);
         usn=s3.next();
         name=s3.next();
+        addr = new Address();
         addr.input();
     }
     void display() {

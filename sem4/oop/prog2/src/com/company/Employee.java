@@ -12,12 +12,13 @@ public class Employee {
         this.name = name;
         this.addr = addr;
     }
-
+    Employee(){}
     void input()
     {
         Scanner s2 = new Scanner(System.in);
         empid=s2.next();
         name=s2.next();
+        addr = new Address();
         addr.input();
     }
     void display() {

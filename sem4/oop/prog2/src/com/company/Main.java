@@ -9,10 +9,14 @@ public class Main {
         int n;
         Scanner s1 = new Scanner(System.in);
         n = s1.nextInt();
+        int i;
         Student s[] = new Student[n];
         College c[] = new College[n];
         Employee e[] = new Employee[n];
-        for (int i = 0; i < n; i++) {
+        for (i = 0; i < n; i++) {
+            s[i] = new Student();
+            c[i] = new College();
+            e[i] = new Employee();
             s[i].input();
             c[i].input();
             e[i].input();
@@ -20,7 +24,7 @@ public class Main {
 
         System.out.println("The entered details are : \n");
 
-        for (int i = 0; i < n; i++) {
+        for (i = 0; i < n; i++) {
             s[i].display();
             c[i].display();
             e[i].display();

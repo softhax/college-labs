@@ -14,6 +14,7 @@ public class Address {
         this.state = state;
         this.country = country;
     }
+    Address(){}
 
     void input() {
         Scanner s4 = new Scanner(System.in);

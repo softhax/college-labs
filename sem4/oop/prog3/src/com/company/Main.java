@@ -8,7 +8,7 @@ public class Main {
         Circle c1=new Circle(1,"red");
         Circle c2=new Circle(2);
         Cylinder x1=new Cylinder(3,1);
-        Cylinder x2=new Cylinder(3,1,"Blue");
+        Cylinder x2=new Cylinder(3,1,"blue");
         c1.display();
         c2.display();
         System.out.println();
