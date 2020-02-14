@@ -5,6 +5,7 @@ void dfs(int a[10][10],int n,int V[10],int source)
 {
     int i;
     V[source]=1;    // Mark this source vertex as visited
+    cout<<"Vertex "<<source<<" is visited."<<endl;
     for(i=0;i<n;i++)
     {
 	// If source is adjacent to i and i is not visited yet then call dfs on i
@@ -23,6 +24,7 @@ void bfs(int a[10][10],int n,int V[10],int source)
 {
     int i,q[10],f=0,r=-1,nd;
     V[source]=1;    //Mark the vertex/node calling this func as visited
+    cout<<"Vertex "<<source<<" is visited."<<endl;
     q[++r]=source;  //Add the source vertex to the rear of the queue
     while(f<=r)	    // Perform the task while  front<=rear ----> This will be false when queue becomes empty.
     {
@@ -41,6 +43,7 @@ void bfs(int a[10][10],int n,int V[10],int source)
 	    {
 		q[++r]=i;
 		V[i]=1;
+		cout<<"Vertex "<<i<<" is visted."<<endl;
 	    }
 	}
     }
