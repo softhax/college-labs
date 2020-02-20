@@ -60,8 +60,8 @@ This repo contains the programs that were made as a part of the college curricul
 - #### Design And Analysis Of Algorithms Lab
   - [X] 1 - Merge Sort and its's time calculations
   - [X] 2 - Quick Sort and it's time calculations
-  - [ ] 3 - DFS, BFS, connectivity, number of components
-  - [ ] 4 - Topological ordering of vertices of digraph using (a) Vertices deletion method and (b) DFS method
+  - [X] 3 - DFS, BFS, connectivity, number of components
+  - [X] 4 - Topological ordering of vertices of digraph using (a) Vertices deletion method and (b) DFS method
   - [ ] 5 - Heap sort and it's time calculations
   - [ ] 6 - Horspool's algorithm for String Matching
   - [ ] 7 - 0/1 Knapsack problem using Dynamic Programming
