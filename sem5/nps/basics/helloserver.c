@@ -61,6 +61,7 @@ void main()
    int sent; // to store the number of bytes sent to client
    
    // socket function returns -1 on error and socket file descriptor on success
+   // 0 in socket func arguments specifies to use corresponding protocol of the family
    if((sockfd  = socket(AF_INET,SOCK_STREAM,0)) == -1)
    {
        perror("socket:" );
@@ -112,6 +113,7 @@ void main()
        // at this point we have received the file descriptor for client in cli
 
        // Now we send the msg
+       // sent contains the size of string sent
        sent = send(cli,msg,strlen(msg),0);
 
        printf("Sent %d bytes to client : %s\n",sent,inet_ntoa(client.sin_addr));
