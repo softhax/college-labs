@@ -1,3 +1,15 @@
+/*Getservbyname program-  this program looks for the file /etc/services*/
+/*The function returns a pointer to servent structure 
+
+struct servent{
+char *s_name;
+char **s_aliases;
+int s_port;
+char *s_proto;
+}
+
+*/
+
 #include<stdlib.h>
 #include<unistd.h>
 #include<errno.h>
@@ -30,10 +42,14 @@ int main()
     se = getservbyname("daytime","tcp");
     printf("%d\n",htons(se->s_port));
 
-
+    //Using getservbyport- Reverse of getservbyname
+    // The function prints the services offerred at the port.
     printf("Getserverbyport function output\n");
     
     se = getservbyport(htons(53),"udp");
+    printf("%s\n",se->s_name);
+
+    se = getservbyport(htons(53),"tcp");
     printf("%s\n",se->s_name);
 
     se = getservbyport(htons(21),"tcp");

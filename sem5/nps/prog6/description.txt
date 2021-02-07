@@ -1,0 +1,13 @@
+PROGRAM DESCRIPTION
+--------------------
+
+This is an TCP iterative echo server program.
+
+
+Server sets up the socket and starts listening.
+
+Client creates connection with server and sends the echo message from input.
+
+The server acknowledges that it has received the message to stdout and sends it back.
+
+At the client side this message is echoed back to stout.

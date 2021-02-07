@@ -34,7 +34,7 @@
     struct sockaddr_in {
 	short int sin_family;     // Address family, AF_INET  ----> 2 bytes
 	unsigned short int sin_port;     // Port number  -----> 2 bytes
-	struct in_addr sin_addr;     // Internet address  -----> 2 bytes
+	struct in_addr sin_addr;     // Internet address  -----> 4 bytes
 	unsigned char sin_zero[8];     // For padding, to make it same size as struct sockaddr  ----> 8 bytes - padding, useless
 }; 
     
