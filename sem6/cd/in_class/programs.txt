@@ -1,0 +1,17 @@
+
+Write a scanner to count the number of words, characters, lines and whitespaces.
+
+
+Write a program to recognize variable names, operators and keywords used in C
+
+
+Write a LEX program to count the number of ‘scanf’ and ‘printf’ statements in a C  program. Replace
+them with ‘readf’ and ‘writef’ statements respectively.  (yyin yyout)
+
+
+Write a yacc program which recognize the strings of the form a^nb^n
+
+
+Write a yacc program which recognizes the simple expressions like a+b*c,a-b/c etc
+
+Write a YACC program that reads the input expression and convert it to post fix expression.
