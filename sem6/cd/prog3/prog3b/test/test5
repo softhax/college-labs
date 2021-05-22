@@ -1,0 +1,5 @@
+int main (int c, int b) {
+    for(i=1;i<n;i = i + 1){
+	int abc;
+    }
+}
