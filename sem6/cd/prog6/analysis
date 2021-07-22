@@ -1,0 +1,13 @@
+# Unoptimized Code
+
+
+# Optimized Code
+
+The number of variables used has been reduced drastically as the
+code is an optimized one.
+The load and store operations have been done in single statements
+and there is a lesser use of jump statements
+All strings inside printf() and scanf() are declared at the beginning of
+the code.
+In order to compensate for the optimum usage of base registers the
+optimized code has more lines of code than the optimized one
