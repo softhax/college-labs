@@ -1,0 +1,6 @@
+abbc - Accept
+abc  - Reject
+aabbcc - Reject
+aabbbbcc - Accept
+\n - Accept
+a b b c - Reject

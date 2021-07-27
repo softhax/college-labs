@@ -1,0 +1,7 @@
+All strings inside printf() and scanf() are declared at the beginning of the code.
+Number of temp variables in un optimized code is more than the number of temp variables in
+optimized code.
+There are less number of LOAD instructions in optimized code compared to un optimized code.
+Even though the number lines in optimized code is more the number of lines in un-optimized
+code
+The register usage and the instructions usage are optimized.

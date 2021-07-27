@@ -1,0 +1,17 @@
+2/3 -3/4 1/0 4.5 -4.6 7 -9 9 24 -65 -1.+4
+Negative Fractions = 2
+Postive Fractions = 2
+Negative Integers = 2
+Positive Integers = 3
+Incorrect Symbols = 1
+Divide By Zero = 1 
+
+
+-0.2 -0.+2 -0.-2 2/3 +2/3 +2/+3 -2/3 -2/+3 -2/-3
+Negative Fractions = 3
+Postive Fractions = 4
+Negative Integers = 0
+Positive Integers = 0
+Incorrect Symbols = 2
+Divide By Zero = 1
+

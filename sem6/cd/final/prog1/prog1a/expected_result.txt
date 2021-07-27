@@ -1,0 +1,4 @@
+Number Of Words = 2
+Number Of Lines=5
+Number Of Characters=11
+Number Of Whitespaces=3
