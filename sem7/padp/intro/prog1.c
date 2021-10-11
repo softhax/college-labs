@@ -5,6 +5,6 @@ int main(int argc,char *argv[]){
 
 #pragma omp parallel num_threads(16)
 
-    printf("Hello World");
+    printf("Hello World\n");
 
 }
