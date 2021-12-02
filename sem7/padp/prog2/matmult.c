@@ -15,10 +15,10 @@ int main(){
     // printf("Enter rows and columns for matrix 2:\n");
     // scanf("%d %d",&m2,&n2);
 
-    m1 = 10000;
-    n1 = 10000;
-    m2 = 10000;
-    n2 = 10000;    
+    m1 = 1000;
+    n1 = 1000;
+    m2 = 1000;
+    n2 = 1000;    
     
     
     
@@ -82,8 +82,8 @@ int main(){
     
     // Parallelize
     int i=0,j=0,k=0;
-    // omp_set_num_threads(8);
-    // #pragma omp parallel for private(i,j,k)
+    omp_set_num_threads(8);
+    #pragma omp parallel for private(i,j,k)
     for(i=0;i<m1;i++){
         res[i] = (int*)malloc(sizeof(int)*n2);
         for(j=0;j<n2;j++){
