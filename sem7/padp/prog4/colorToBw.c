@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 	double t=omp_get_wtime();
 	omp_set_num_threads(nt);
 	#pragma omp parallel for private(y,color,red,blue,green) schedule(static,50)/*schedule(dynamic,50) //schedule(guided,50)*/
+
 	for(x=0;x<w;x++)
 		for(y=0;y<h;y++)
 		{

@@ -1,1 +1,2 @@
+http://jakascorner.com/blog/2016/06/omp-for-scheduling.html
 -lgd -lpng -lz -ljpeg -lfreetype -lm -fopenmp
